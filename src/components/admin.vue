@@ -2,7 +2,7 @@
   <div>
     <div class="row">
       <div class="col-md-6 col-sm-12">
-        <!--new pizza component-->
+        <new-pizza></new-pizza>
       </div>
       <div class="col-md-6 col-sm-12">
         <h3>Menu:</h3>
@@ -53,7 +53,12 @@
 </template>
 
 <script>
+import newPizza from './newPizza.vue'
 export default {
+  components: {
+    newPizza
+  }
+
 
 }
 
