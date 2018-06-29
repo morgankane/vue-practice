@@ -23,31 +23,35 @@
         </tbody>
       </table>
     </div>
-<!--stopping basket-->
+<!--shopping basket-->
     <div class="col-sm-12 col-md-6">
-      <table class="table">
-        <thead class="thead-default">
-          <tr>
-            <th>Quantity</th>
-            <th>Item</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody v-for="item in basket">
-          <tr>
-            <td><button class="btn btn-sm" type="button">-</button>
-            <span>{{ item.quantity }}</span>
-            <button class="btn btn-sm" type="button">+</button></td>
-            <td>{{ item.name }} {{ item.size }}</td>
-            <td>{{ item.price * item.quantity }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div v-if="basket.length > 0">
+        <table class="table">
+          <thead class="thead-default">
+            <tr>
+              <th>Quantity</th>
+              <th>Item</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody v-for="item in basket">
+            <tr>
+              <td><button class="btn btn-sm" type="button">-</button>
+              <span>{{ item.quantity }}</span>
+              <button class="btn btn-sm" type="button">+</button></td>
+              <td>{{ item.name }} {{ item.size }}</td>
+              <td>{{ item.price * item.quantity }}</td>
+            </tr>
+          </tbody>
+        </table>
       <p>Order total: </p>
       <button class="btn btn-success btn-block">Place Order</button>
+    </div><!--end basket column-->
+    <div v-else>
+      <p>{{ basketText }}</p>
     </div>
-
-  </div>
+    </div>
+</div><!--end div row-->
 </template>
 
 <script>
@@ -55,6 +59,7 @@ export default {
   data() {
     return {
       basket: [],
+      basketText: 'Your basket is empty!',
       getMenuItems: {
         1: {
           'name': 'Margherita',
