@@ -4,7 +4,7 @@
       <navbar></navbar>
     </div>
     <div class="container">
-      <admin></admin>
+      <router-view></router-view>
     </div>
     <div class="container">
       <mainfooter></mainfooter>
@@ -15,17 +15,11 @@
 <script>
 import navbar from './components/navbar.vue'
 import mainfooter from './components/mainfooter.vue'
-import Home from './components/Home.vue'
-import mainmenu from './components/mainmenu.vue'
-import admin from './components/admin.vue'
 
 export default {
   components: {
     navbar,
-    mainfooter,
-    Home,
-    mainmenu,
-    admin
+    mainfooter
   }
 }
 </script>
