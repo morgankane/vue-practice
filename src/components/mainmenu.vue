@@ -23,7 +23,7 @@
         </tbody>
       </table>
     </div>
-
+<!--stopping basket-->
     <div class="col-sm-12 col-md-6">
       <table class="table">
         <thead class="thead-default">
@@ -33,13 +33,13 @@
             <th>Total</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-for="item in basket">
           <tr>
             <td><button class="btn btn-sm" type="button">-</button>
-            <span>1</span>
+            <span>{{ item.quantity }}</span>
             <button class="btn btn-sm" type="button">+</button></td>
-            <td>Margherita 9"</td>
-            <td>9.95</td>
+            <td>{{ item.name }} {{ item.size }}</td>
+            <td>{{ item.price * item.quantity }}</td>
           </tr>
         </tbody>
       </table>
