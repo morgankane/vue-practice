@@ -49,14 +49,23 @@
         </table>
       </div>
     </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-12 col-log-6">
+        <login></login>
+      </div>
+    </div>
+
   </div>
 </template>
 
 <script>
 import newPizza from './newPizza.vue'
+import login from './login.vue'
 export default {
   components: {
-    newPizza
+    newPizza,
+    login
   }
 
 
