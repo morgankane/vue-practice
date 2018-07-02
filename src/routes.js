@@ -8,7 +8,14 @@ import orderingGuide from './components/orderingGuide'
 import admin from './components/admin'
 
 export const routes = [
-  { path: '/', component: Home },
+  { path: '/',
+    components: {
+      default: Home,
+      "ordering-guide": orderingGuide,
+      "delivery": delivery,
+      "history": history
+    }
+  },
   { path: '/mainmenu', component: mainmenu },
   { path: '/admin', component: admin, beforeEnter: (to, from, next) => {
     alert('This area is for authorized users only, please login to continue.');
