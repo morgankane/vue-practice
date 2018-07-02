@@ -4,12 +4,8 @@
     <nav class="navbar navbar-toggleable-md navbar-light">
       <a class="navbar-brand" href="/">PIZZA PLANET</a>
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <router-link to="/"><a class="nav-link">home</a></router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/mainmenu"><a class="nav-link">menu</a></router-link>
-        </li>
+          <router-link to="/" tag="li"><a class="nav-link">home</a></router-link>
+          <router-link to="/mainmenu" tag="li"><a class="nav-link">menu</a></router-link>
       </ul>
     </nav>
 
