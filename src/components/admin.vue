@@ -66,9 +66,17 @@ export default {
   components: {
     newPizza,
     login
+  },
+  data() {
+    return {
+      name: 'Chris'
+    }
+  },
+  beforeRouteEnter: (to, from, next) => {
+    next(vm => {
+      alert('Hi ' + vm.name)
+    })
   }
-
-
 }
 
 </script>

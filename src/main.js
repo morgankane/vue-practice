@@ -30,13 +30,6 @@ const router = new VueRouter({
   routes
 })
 
-router.beforeEach((to, from, next) => {
-  if (to.path === "/mainmenu") {
-    next()
-  } else {
-    next(false);
-  }
-})
 
 new Vue({
   el: '#app',
