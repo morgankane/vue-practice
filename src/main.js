@@ -8,10 +8,11 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/mainmenu/:items', component: mainmenu }
+  { path: '/mainmenu', component: mainmenu }
 ]
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 
